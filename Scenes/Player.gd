@@ -15,6 +15,8 @@ var mouse_sensitivity = 0.002
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+#Player Controller
+
 func get_input():
 	var input_dir = Vector3()
 	if Input.is_action_pressed("move_forward"):
@@ -28,6 +30,7 @@ func get_input():
 	#input_dir = input_dir.normalized() #add to cancel strafe running
 	return input_dir
 
+#Mouse Look
 func _unhandled_input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(-event.relative.x * mouse_sensitivity)

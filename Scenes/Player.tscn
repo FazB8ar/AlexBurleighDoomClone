@@ -23,6 +23,6 @@ shape = SubResource( 2 )
 [node name="Pivot" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.62121, 0 )
 
-[node name="Camera" type="Camera" parent="Pivot"]
-
 [node name="Gun" type="Spatial" parent="Pivot"]
+
+[node name="Camera" type="Camera" parent="Pivot"]
