@@ -29,7 +29,7 @@ data = PoolVector3Array( -1.3936, 0, -1.68, 1, 0, -7, 1, 0, -1.68, -1.3936, 0, -
 [node name="Test Level" instance=ExtResource( 1 )]
 transform = Transform( 1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0, 0 )
 
-[node name="Navigation" type="Navigation" parent="." index="0"]
+[node name="Navigation" type="Navigation" parent="." index="0" groups=["NavMesh"]]
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation" index="0"]
 navmesh = SubResource( 3 )
