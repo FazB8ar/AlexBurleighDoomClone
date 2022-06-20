@@ -7,10 +7,11 @@ var max_speed = 8
 var mouse_sensitivity = 0.002
 
 #gun variables
-onready var pistol = preload("res://Scenes/Pistol.tscn")
-onready var shotgun =  preload("res://Scenes/Shotgun.tscn")
+onready var Pistol = preload("res://Scenes/Pistol.tscn")
+onready var Shotgun =  preload("res://Scenes/Shotgun.tscn")
+onready var AK47 =  preload("res://Scenes/AK47.tscn")
 var current_gun = 0
-onready var carried_guns = [pistol,shotgun]
+onready var carried_guns = [Pistol,Shotgun,AK47]
 
 #functions
 

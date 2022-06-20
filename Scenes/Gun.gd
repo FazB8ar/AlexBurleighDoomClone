@@ -26,7 +26,7 @@ func make_flash():
 	add_child(f)
 
 func _process(delta):
-	if Input.is_action_just_pressed("shoot") and can_shoot:
+	if Input.is_action_pressed("shoot") and can_shoot:
 		gun_sprite.play("shoot")
 		make_flash()
 		check_hit()
@@ -36,3 +36,7 @@ func _process(delta):
 		
 		can_shoot = true
 		gun_sprite.play("idle")
+
+
+func _on_Timer_timeout():
+	can_shoot = true # Replace with function body.
