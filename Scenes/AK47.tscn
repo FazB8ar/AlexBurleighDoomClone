@@ -16,7 +16,7 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "shoot",
-"speed": 12.0
+"speed": 10.0
 } ]
 
 [node name="AK47" type="Spatial"]
@@ -50,7 +50,7 @@ enabled = true
 cast_to = Vector3( 0, 0, -100 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.088
+wait_time = 0.083
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
