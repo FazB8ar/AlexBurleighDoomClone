@@ -13,7 +13,7 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "shoot",
 "speed": 12.0
