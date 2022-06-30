@@ -17,6 +17,7 @@ func deal_damage():
 func _process(delta):
 	translate(Vector3.FORWARD * rocket_speed * delta)
 
+
 func _on_Rocket_body_entered(body):
 	if body.is_in_group("Player"):
 		return

@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/Rifle/ak47a0.png" type="Texture" id=2]
 [ext_resource path="res://Sprites/Rifle/ak4fb0.png" type="Texture" id=3]
 [ext_resource path="res://Sprites/Rifle/ak4fa0.png" type="Texture" id=4]
-[ext_resource path="res://Scenes/Gun.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/AK47.gd" type="Script" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -20,7 +20,7 @@ animations = [ {
 } ]
 
 [node name="AK47" type="Spatial"]
-script = ExtResource( 6 )
+script = ExtResource( 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

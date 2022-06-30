@@ -11,9 +11,10 @@ func launch_projectile():
 	new_rocket.global_transform = spawn_location.global_transform
 
 func _process(delta):
-	if Input.is_action_just_pressed("shoot") and can_shoot:
+	if Input.is_action_just_pressed("shoot") and can_shoot and PlayerStats.ammo_Rocket > 0:
 		gunsprite.play("shoot")
 		launch_projectile()
+		PlayerStats.change_Rocket_ammo(-1)
 		can_shoot = false
 		yield(gunsprite,"animation_finished")
 		can_shoot = true
