@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Test Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/EnemyBasicGrunt.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=4]
 
 [node name="World" type="Spatial"]
 
@@ -25,3 +26,5 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16376, 0.90645, 0 )
 
 [node name="EnemyBasicGrunt5" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24564, 0.977814, 0 )
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
