@@ -27,6 +27,21 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "walking",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
+"loop": false,
+"name": "die",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 5 ), ExtResource( 4 ), ExtResource( 14 ), ExtResource( 8 ) ],
 "loop": true,
 "name": "shoot",
@@ -35,21 +50,6 @@ animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
 "loop": false,
 "name": "explode",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "walking",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 8 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "hit",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ) ],
-"loop": false,
-"name": "die",
 "speed": 5.0
 } ]
 
@@ -71,14 +71,18 @@ billboard = 2
 frames = SubResource( 2 )
 animation = "walking"
 
-[node name="RayCast" type="RayCast" parent="."]
+[node name="Visual" type="RayCast" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.46737, 0 )
+enabled = true
+cast_to = Vector3( 0, -1, -20 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
-[node name="Area" type="Area" parent="."]
+[node name="Aural" type="Area" parent="."]
 
-[node name="CollisionShape" type="CollisionShape" parent="Area"]
+[node name="CollisionShape" type="CollisionShape" parent="Aural"]
 shape = SubResource( 3 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="Aural" to="." method="_on_Aural_body_entered"]

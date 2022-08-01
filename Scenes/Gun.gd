@@ -37,6 +37,5 @@ func _process(delta):
 		can_shoot = true
 		gun_sprite.play("idle")
 
-
 func _on_Timer_timeout():
 	can_shoot = true # Replace with function body.

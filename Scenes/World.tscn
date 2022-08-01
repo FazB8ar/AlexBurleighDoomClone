@@ -11,6 +11,7 @@
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3275, 1.89442, 0 )
 
 [node name="Test Level" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177617, 0 )
