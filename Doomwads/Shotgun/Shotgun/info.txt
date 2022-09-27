@@ -1,0 +1,8 @@
+Name: AA12 Shotgun
+Class: Level 3
+Type: Hitscan
+Palette: Doom
+Summon: AA12
+Ammotype: Shell
+AltFire: No
+Powered Mode: No

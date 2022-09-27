@@ -1,0 +1,61 @@
+PointLight HELLSTORMBOMB1
+{
+Color 1.0 0.7 0.0
+Size 32
+}
+
+Flickerlight HELLSTORMBOMB2
+{
+Color 1.0 0.7 0.0
+Size 32
+SecondarySize 41
+Chance 0.3
+}
+
+FlickerLight HELLSTORMBOMB3
+{
+Color 0.5 0.1 0.0
+Size 40
+SecondarySize 44
+Chance 0.3
+}
+
+FlickerLight HELLSTORMBOMB4
+{
+Color 0.3 0.0 0.0
+Size 48
+SecondarySize 52
+Chance 0.3
+}
+
+Object HellStormBomb1
+{
+Frame HSBMA { Light HELLSTORMBOMB1 }
+Frame MISLB { Light HELLSTORMBOMB2 }
+Frame MISLC { Light HELLSTORMBOMB3 }
+Frame MISLD { Light HELLSTORMBOMB4 }
+}
+
+Object HellStormBomb2
+{
+Frame HSBMA { Light HELLSTORMBOMB1 }
+Frame MISLB { Light HELLSTORMBOMB2 }
+Frame MISLC { Light HELLSTORMBOMB3 }
+Frame MISLD { Light HELLSTORMBOMB4 }
+}
+
+Object HellStormBomb3
+{
+Frame HSBMA { Light HELLSTORMBOMB1 }
+Frame MISLB { Light HELLSTORMBOMB2 }
+Frame MISLC { Light HELLSTORMBOMB3 }
+Frame MISLD { Light HELLSTORMBOMB4 }
+}
+
+Object HellStormBomb4
+{
+Frame HSBMA { Light HELLSTORMBOMB1 }
+Frame MISLB { Light HELLSTORMBOMB2 }
+Frame MISLC { Light HELLSTORMBOMB3 }
+Frame MISLD { Light HELLSTORMBOMB4 }
+}

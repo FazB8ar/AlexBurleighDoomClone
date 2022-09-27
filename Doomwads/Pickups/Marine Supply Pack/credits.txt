@@ -1,0 +1,10 @@
+Submitted: DBJ87
+Decorate: DBJ87
+Palette: Doom
+Sprites: ID Software
+Sprite Edit: DBJ87
+Sounds: ID Software, Doom 3
+Idea Base: Own Idea
+
+Special thanks to Tormenter667 & MagicWizard for feedback & suggestions on
+better improvements made to it's original appearance.

@@ -8,24 +8,12 @@
 [node name="World" type="Spatial"]
 
 [node name="EnemyBasicGrunt3" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3275, 1.89442, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.52898, 1.89442, -6.77048 )
 
 [node name="Test Level" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.177617, 0 )
-
-[node name="EnemyBasicGrunt" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08188, 1.36625, 0 )
-
-[node name="EnemyBasicGrunt2" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.08188, 1.36625, -2.47373 )
-
-[node name="EnemyBasicGrunt4" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.16376, 0.90645, 0 )
-
-[node name="EnemyBasicGrunt5" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.24564, 0.977814, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 30.4467, 0.177617, -8.32005 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]

@@ -1,0 +1,6 @@
+20/05/16
+Replaced original Armor sprites with Doom's Green Armor, added bright effect
+and timed the animation sequences  to match the armour's flashing.
+
+02/06/16
+GLdef light effects added, showing the pulsing glow of the Green Armor

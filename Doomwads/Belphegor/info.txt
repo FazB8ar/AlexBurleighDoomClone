@@ -1,0 +1,14 @@
+Name: Belphegor
+Difficulty: Medium
+Connection: None
+Summon: BelphegorClone
+Melee: No
+Distance: Projectile
+Type: Demon, Fire
+Brightmaps: Yes
+Actor modifications: No
+ACS: No
+
+
+A stronger Baron of Hell variant. Throws three stronger fireballs in quick succession, and has a
+bit more health, as well.

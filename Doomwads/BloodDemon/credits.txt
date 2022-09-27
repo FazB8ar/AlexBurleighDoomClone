@@ -1,0 +1,6 @@
+Code: Carnevil, Ghastly (ZScript conversion)
+GLDefs: Sandypaper (Brightmaps)
+Sounds: Id Software
+Sprites: Id Software
+Sprite Edit: Neoworm, Vader
+Idea Base: Skulltag's Blood Demon by Cyb

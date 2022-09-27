@@ -1,0 +1,5 @@
+Submitted: Captain Toenail
+Decorate: Captain Toenail
+Sprites: Id Software, Infinity Ward
+SpriteEdit: Captain Toenail
+Sounds: mateomateo002

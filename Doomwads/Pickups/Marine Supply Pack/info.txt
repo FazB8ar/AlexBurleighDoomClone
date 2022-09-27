@@ -1,0 +1,41 @@
+Name: Marine Supply Pack
+Type: Heath, Armor, Ammo
+Palette: Doom
+Summon: SupplyPack
+Use Type: Instant
+Duration: Instant
+Brightmaps: No
+
+It's handy carrying an emergency supply of health and armor with you right?
+Gives the player Deployable Green Armor, a Deployable and more powerful Medikit
+as well a standard Backpack. Everything a Marine needs to keep on fighting.
+This is literally a life saver against Bosses, groups of harder enemies or
+simply, when the going gets tough, but you can't get going...
+
+The Deployable Armor, behaves exactly like Green Armour, it cannot replace
+Mega-Armor and cannot be used if the current armor stats are over 100%.
+
+The Deployable Medikit heals up to 50% instead of 25%.
+Like Doom's Medikits it will only be used if your health is below 100%.
+This makes it worth saving if there is already plenty of health available.
+
+You can only carry 1 set of the Deployable Health & Armor.
+If you haven't used either but collect another Supply Pack, you will just get
+an extra Backpack, but you can restock anything that was used.
+Again, this can help make saving the Health & Armor given more tactical.
+
+Idea for this based on "Health Stations" I created & use on my own maps.
+That can drop health & armor bonuses as well as being able to be refilled as
+long as they don't run dry...
+
+[GDLEF Notes]
+Green Armor Light Def is added, as I have seen a non-fatal error message
+//"GLDEFS object "SupplyPack" references undefined light "GREENARMOR1"
+when testing this item. This is telling me the pre-existing Green Armor GLDef
+needed is not configured or doesn't exist and stops you from seeing the
+Green Glow from the armor in game. Users can keep the PointLight definition or
+delete as they wish. I have left it in, incase you find the same errors,
+without it. But I'd advise you to leave it as it is.
+
+This is a visual effect & only works if using GZDoom or any other Program that
+supports Open GLDef formats.

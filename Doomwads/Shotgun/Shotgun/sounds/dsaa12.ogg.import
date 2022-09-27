@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dsaa12.ogg-fff20d49024b5a3a11a4bd0779707c94.oggstr"
+
+[deps]
+
+source_file="res://Doomwads/Shotgun/Shotgun/sounds/dsaa12.ogg"
+dest_files=[ "res://.import/dsaa12.ogg-fff20d49024b5a3a11a4bd0779707c94.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

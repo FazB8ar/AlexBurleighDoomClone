@@ -1,0 +1,93 @@
+ACTOR Impactor : Weapon
+{
+	+WEAPON.MELEEWEAPON
+	Inventory.Icon "IMPAZ0"
+	Weapon.UpSound "weapons/IMGRaise"
+	Weapon.SlotNumber 1
+	Inventory.PickupMessage "You picked up the Impactor Gauntlet! Big punchy time!"
+	Obituary "%o's face was smashed in by %k's Impactor Gauntlet!"
+	States
+	{
+	Spawn:
+		IMPA Z -1
+		Stop
+	Select:
+		IMPA A 1 A_Raise
+		loop
+	Deselect:
+		IMPA A 1 A_Lower
+		Wait
+	Ready:
+		IMPA A 1 A_WeaponReady
+		loop
+	Fire:
+		IMPA AB 2
+		TNT1 A 0 A_PlaySound("weapons/IMGCok")
+		IMPA CDE 2
+		TNT1 A 5
+		Goto Hold
+	Hold:
+		TNT1 A 1
+		TNT1 A 0 A_ReFire
+		IMPA FGHI 1
+		TNT1 A 0 A_CustomPunch (10 * random(10, 55),1,CPF_NOTURN ,"ImpactorPuff",92, 0, 0, ArmorBonus, "weapons/IMGHit", "weapons/IMGMiss")
+		TNT1 A 0 A_Blast(BF_DONTWARN | BF_NOIMPACTDAMAGE | BF_AFFECTBOSSES, 25, 60, 20, "GauntletImpact")
+		TNT1 A 0 A_Quake(3, 10, 0, 10)
+		IMPA JKLMN 1
+		IMPA N 5
+		IMPA OPQRS 3
+		TNT1 A 5
+		IMPA EDCBA 2
+		Goto Ready
+	AltFire:
+		IMPA AB 2
+		TNT1 A 0 A_PlaySound("weapons/IMGCok")
+		IMPA CDE 2
+		TNT1 A 5
+		Goto AltHold
+	AltHold:
+		TNT1 A 1
+		TNT1 A 0 A_ReFire
+		IMPA FGHI 1
+		TNT1 A 0 ThrustThing(angle * 256 / 360, 30, 1, 0)
+		TNT1 A 0 A_PlaySound("weapons/IMGThrust")
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA J 1 A_CustomPunch (8 * random(1, 3),1,CPF_NOTURN ,"ImpactorPuff",92,1, 5)
+		IMPA OPQRS 2
+		TNT1 A 5
+		IMPA EDCBA 2
+		Goto Ready
+	}
+}
+ACTOR ImpactorPuff : BulletPuff
+{
+  +PUFFONACTORS
+  States
+  {
+  Spawn:
+    PUFF ABCD 4
+    Stop
+  }
+}  
+
+Actor GauntletImpact : BlastEffect
+{
+  +NOBLOCKMAP
+  +NOGRAVITY
+  +NOCLIP
+  +NOTELEPORT
+  States
+  {
+  Spawn:
+    TNT1 A 0
+    Stop
+  }
+}

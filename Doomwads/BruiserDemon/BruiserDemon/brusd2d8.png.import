@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/brusd2d8.png-e33d1878bf5ece5d37ac3f632bd25db6.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Doomwads/BruiserDemon/BruiserDemon/brusd2d8.png"
+dest_files=[ "res://.import/brusd2d8.png-e33d1878bf5ece5d37ac3f632bd25db6.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

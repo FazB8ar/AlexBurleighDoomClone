@@ -1,0 +1,14 @@
+Name: Blood Demon
+Difficulty: Medium
+Connection: None
+Summon: BloodDemonClone
+Melee: Yes
+Distance: No
+Type: Demon, Cybernetic
+Brightmaps: Yes
+Actor modification: No
+ACS: No
+
+
+A stronger version of Doom's Demon. It has more health, does more damage and has double the health.
+Fits better in tech base style environments than in hellish landscapes.

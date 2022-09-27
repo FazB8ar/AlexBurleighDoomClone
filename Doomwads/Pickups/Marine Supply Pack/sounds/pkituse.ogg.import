@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pkituse.ogg-9a41e0f2632cd17c8385f9b20c7e8c2b.oggstr"
+
+[deps]
+
+source_file="res://Doomwads/Pickups/Marine Supply Pack/sounds/pkituse.ogg"
+dest_files=[ "res://.import/pkituse.ogg-9a41e0f2632cd17c8385f9b20c7e8c2b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

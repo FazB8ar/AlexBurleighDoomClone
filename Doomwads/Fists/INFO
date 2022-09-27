@@ -1,0 +1,16 @@
+Name: Impactor Gauntlet
+Class: 1
+Type: Melee
+Palette: Doom
+Summon: Impactor
+Ammo Type: None
+Powered Mode: No
+Added States: No
+ACS: No
+
+Description: The Impactor Gauntlet was created with the aim to give space marines
+a perminent powerful melee weapon in case they run out of ammo. This heavy beast
+packs a serious punch which can knock back some foes when up close. This weapon also
+includes a boost thruster which allows the wearer to speed forward a ways to
+cross gaps and hit enemies multiple times, but deals significantly less damage.
+With careful timing, the primary fire can even punch away projectiles!

@@ -1,0 +1,17 @@
+object SupplyPack
+{
+frame XPAKA { light GREENARMOR1 }
+frame XPAKB { light GREENARMOR2 }
+}
+
+pointlight GREENARMOR1
+{
+    color 0.0 0.6 0.0
+    size 48
+}
+
+pointlight GREENARMOR2
+{
+    color 0.0 0.6 0.0
+    size 32
+}

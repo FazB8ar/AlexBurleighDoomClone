@@ -1,0 +1,147 @@
+Class HellstormCannon : Weapon
+{
+  Default
+  {
+    Obituary "%o was obliterated by %k's HellStorm Cannon!";
+    Weapon.SelectionOrder 2500;
+    Weapon.AmmoUse 1;
+    Weapon.AmmoGive 8;
+    Weapon.AmmoType "ImpactGrenade";
+    Inventory.PickupMessage "You got the HellStorm Cannon";
+    +Weapon.NoAutoFire
+    +Weapon.NoAutoAim
+  }
+
+  States
+  {
+  Ready:
+    HSTM B 1 A_WeaponReady();
+    Loop;
+  Deselect:
+    HSTM B 1 A_Lower();
+    Loop;
+  Select:
+    HSTM B 1 A_Raise();
+    Loop;
+  Fire:
+    HSTM C 4 Bright A_GunFlash();
+    HSTM D 5 Bright
+    {
+      A_PlaySound("HellStorm/Fire", CHAN_WEAPON);
+      A_FireProjectile("HellStormBomb1", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb1", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb2", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb2", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb3", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb3", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb4", Random(-9, 9), 0, 0, 0, 0, Random(-6, 2));
+      A_FireProjectile("HellStormBomb4", Random(-9, 9), 1, 0, 0, 0, Random(-6, 2));
+    }
+    HSTM EF 6 Bright;
+    HSTM B 6;
+    HSTM B 45 A_PlaySound("HellStorm/Reload", CHAN_6);
+    Goto Ready;
+  Flash:
+    TNT1 A 1;
+    Stop;
+  Spawn:
+    HSTM A -1;
+    Stop;
+  }
+}
+
+Class HellStormBomb1 : Actor
+{
+  Default
+  {
+    Radius 11;
+    Height 8;
+    Speed 25;
+    Damage 10;
+    Gravity 0.3;
+    Scale 0.5;
+    DeathSound "HellStorm/Hit";
+    Decal "RevenantScorch";
+    Projectile;
+    -NoGravity
+  }
+
+  States
+  {
+  Spawn:
+    HSBM A 1 Bright;
+    Loop;
+  Death:
+    MISL B 8 Bright
+    {
+      bNoGravity=true;
+      A_Explode(64, 64, XF_HURTSOURCE);
+    }
+    MISL C 6 Bright;
+    MISL D 4 Bright;
+    Stop;
+  }
+}
+
+Class HellStormBomb2 : HellStormBomb1
+{
+  Default
+  {
+    Speed 24;
+    Gravity 0.28;
+  }
+}
+
+Class HellStormBomb3 : HellStormBomb1
+{
+  Default
+  {
+    Speed 23;
+    Gravity 0.26;
+  }
+}
+
+Class HellStormBomb4 : HellStormBomb1
+{
+  Default
+  {
+    Speed 22;
+    Gravity 0.24;
+  }
+}
+
+Class ImpactGrenade : Ammo
+{
+  Default
+  {
+    Inventory.PickupMessage "You got some impact grenades";
+    Inventory.Amount 4;
+    Inventory.MaxAmount 40;
+    Ammo.BackpackAmount 4;
+    Ammo.BackpackMaxAmount 80;
+    Inventory.Icon "HSBMA7A3";
+  }
+
+  States
+  {
+  Spawn:
+    HSAM A -1;
+    Stop;
+  }
+}
+
+Class ImpactGrenadeBox : ImpactGrenade
+{
+  Default
+  {
+    Inventory.PickupMessage "You got a box of impact grenades";
+    Inventory.Amount 20;
+  }
+
+  States
+  {
+  Spawn:
+    HSAM B -1;
+    Stop;
+  }
+}

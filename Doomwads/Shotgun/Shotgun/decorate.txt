@@ -1,0 +1,39 @@
+ACTOR AA12 : DoomWeapon
+{
+  Weapon.AmmoUse 1
+  Weapon.AmmoGive 8
+  Weapon.AmmoType "Shell"
+  Inventory.PickupMessage "You got the AA-12 shotgun!"
+  Obituary "%o was blown away by %k's AA-12 shotgun."
+  Weapon.SlotNumber 3
+  Decal "BulletChip"
+  AttackSound "AA12/Fire"
+  Scale 0.85
+  States
+  {
+  Ready:
+    AA12 A 1 A_WeaponReady
+    Loop
+  Deselect:
+    AA12 A 1 A_Lower
+    Loop
+  Select:
+    AA12 A 1 A_Raise
+    Loop
+  Fire:
+    AA12 B 1 Bright A_FireBullets (6, 4, 5, 5, "BulletPuff")
+    AA12 B 0 Bright A_GunFlash
+    AA12 B 0 Bright A_SetPitch (pitch-0.5)
+    AA12 C 1 Bright
+    AA12 DA 2
+    AA12 A 7 A_ReFire
+    Goto Ready
+  Flash:
+    TNT1 A 4 Bright A_Light1
+    TNT1 A 3 Bright A_Light2
+    Goto LightDone
+  Spawn:
+    AA12 E -1
+    Stop
+  }
+}

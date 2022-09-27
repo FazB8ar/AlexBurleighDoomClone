@@ -1,0 +1,2 @@
+items/MarineKitHealth	PKITUSE
+items/MarineKitArmor	NARMR2

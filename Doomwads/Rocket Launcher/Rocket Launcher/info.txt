@@ -1,0 +1,32 @@
+Name: HellStorm Cannon
+Class: 6
+Type: Projectile
+Palette: Doom
+Summon: HellStormCannon
+Ammo Type: ImpactGrenade (Custom)
+Altfire: No
+Powered Mode: No
+Brightmaps: No
+Actor modification: No
+ACS: No
+
+
+After the invasion, the Union Aerospace Corporation went into weapons research,
+trying to develop weapons to help the military fight off future invasions. Due to
+Hell's tendency to swarm with individually weak creatures, branches were set up
+specifically to find ways to counter this. One such counter is this, the HSTM-310
+"HellStorm Cannon."
+
+Based on standard rocket launcher technology which proved very effective during
+the invasion, the HellStorm fires a cluster of impact grenades. Individually, each
+impact grenade has only half the explosive potential of a rocket, but the entire
+cluster has a total of four times the yield, easily able to clear a swarming group
+or a more powerful demon with a single shot.
+
+The drawback is that the weapon takes some skill to fire correctly. One mis-fire
+could smear a careless marine across the walls, and the spread itself it difficult
+to aim correctly. It also has a reload time greater than that of the rocket launcher,
+and must reload after every shot.
+
+Even with the drawbacks, the HellStorm Cannon is a powerful weapon in the UAC's
+arsenal against future invasions.

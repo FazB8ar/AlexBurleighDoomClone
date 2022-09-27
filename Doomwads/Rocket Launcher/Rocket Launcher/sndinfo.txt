@@ -1,0 +1,5 @@
+HellStorm/Fire		HSTMFIRE
+HellStorm/Reload	HSTMRELD
+HellStorm/Hit		HSTMHIT
+
+$Limit HellStorm/Hit 0
