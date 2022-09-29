@@ -2,29 +2,31 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.stex"
+path.s3tc="res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.s3tc.stex"
+path.etc2="res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.etc2.stex"
 metadata={
-"vram_texture": false
+"imported_formats": [ "s3tc", "etc2" ],
+"vram_texture": true
 }
 
 [deps]
 
 source_file="res://Maps/textures/drdoor18.png"
-dest_files=[ "res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.stex" ]
+dest_files=[ "res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.s3tc.stex", "res://.import/drdoor18.png-31b87ad320a5fd4da783a972e66cb0b5.etc2.stex" ]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=false
-flags/mipmaps=false
+flags/mipmaps=true
 flags/anisotropic=false
 flags/srgb=2
-process/fix_alpha_border=true
+process/fix_alpha_border=false
 process/premult_alpha=false
 process/HDR_as_SRGB=false
 process/invert_color=false
