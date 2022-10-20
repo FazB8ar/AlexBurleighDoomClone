@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/pkituse.ogg-67b7a342a061617a2012c82b5fcaaba5.oggstr"
+
+[deps]
+
+source_file="res://Sprites/Pickups/Marine Supply Pack/sounds/pkituse.ogg"
+dest_files=[ "res://.import/pkituse.ogg-67b7a342a061617a2012c82b5fcaaba5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -3,7 +3,7 @@ extends KinematicBody
 #basis variables
 var velocity = Vector3()
 var gravity = -30
-var max_speed = 8
+var max_speed = 5
 var mouse_sensitivity = 0.002
 
 #gun variables
@@ -48,6 +48,8 @@ func _physics_process(delta):
 	var desired_velocity = get_input() * max_speed
 	velocity.x = desired_velocity.x
 	velocity.z = desired_velocity.z
+	if Input.is_action_just_pressed("jump") and is_on_floor():
+		velocity.y = 10 #this value might need to be trialled
 	velocity = move_and_slide(velocity, Vector3.UP, true)
 
 func change_gun(gun):
@@ -68,3 +70,9 @@ func _process(delta):
 		if current_gun < 0:
 			current_gun = len(carried_guns)-1
 		change_gun(current_gun)
+
+	elif Input.is_action_just_pressed("use"):
+		if $InteractCast.is_colliding():
+			if $InteractCast.get_collider().is_in_group("Door"):
+				$InteractCast.get_collider().get_node("AnimationPlayer").play("OpenDoor")
+				print("Door Open")

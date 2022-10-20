@@ -1,0 +1,62 @@
+//Marine Supply Pack
+Actor SupplyPack : CustomInventory 11674
+{
+//$Category Powerups
+//$Title Marine Supply Pack
+ Radius 20
+ Height 16
+ Inventory.PickupSound "Misc/P_PkUp"
+ Inventory.PickupMessage "You found an Emergency Supply Pack"
++COUNTITEM
++INVENTORY.ALWAYSPICKUP
+Inventory.MaxAmount 0
+ States
+ {
+  Spawn:
+  XPAK A 7 Bright
+  XPAK B 6
+  Loop
+  Pickup:
+  TNT1 A 0 A_GiveInventory("Backpack")
+  TNT1 A 0 A_GiveInventory("PackMedikit")
+  TNT1 A 0 A_GiveInventory("PackArmor")
+  Stop
+  }
+ }
+//Marine Pack Armor
+Actor PackArmor : CustomInventory
+{
+  +INVENTORY.INVBAR
+  Tag "Combat Armor"
+  Inventory.UseSound "items/MarineKitArmor"
+  Inventory.Icon "XPAMA0"
+  Inventory.InterHubAmount 1
+  Inventory.MaxAmount 1
+  States
+  {
+  Spawn:
+    XPAM A 0
+    Loop
+	Use:
+	TNT1 A 0 A_GiveInventory("GreenArmor")
+	Stop
+  }
+}
+//Marine Pack Medikit
+Actor PackMedikit : HealthPickup
+{
+  Tag "Emergency MediKit"
+  Health 50
+  +INVENTORY.INVBAR
+  Inventory.UseSound "items/MarineKitHealth"
+  Inventory.Icon "XPMKA0"
+  Inventory.InterHubAmount 1
+  Inventory.MaxAmount 1
+  HealthPickup.AutoUse 1
+  States
+  {
+  Spawn:
+    XPMK A 0
+    Loop
+  }
+}
